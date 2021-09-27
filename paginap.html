@@ -11,9 +11,16 @@
     <meta charset="utf-8">
 </head>
 <body>
-    <form method="post" action="action.php">
-        Ingresa la cantidad de vertices del primer grafo: <input name="ingresatexto" type="text" />
+    {{textolibre}}
+    {% if resultado == null %}
+    <form method="POST" action="/testform">
+       number 1 : <input name="number1" type="number" />
+       number 2 : <input name="number2" type="number" />
+       <input type="submit">enviar</head>
     </form>
+    {% else %}
+    el resultado es {{resultado}}
+    {% endif %}
 
 </body>
 {% endblock %}
